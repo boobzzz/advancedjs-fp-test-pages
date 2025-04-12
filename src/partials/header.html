@@ -1,19 +1,113 @@
 <header class="header">
-  <div class="container">
+  <div class="header__container container">
     <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
+      <a href="./index.html" id="logo-button" class="nav__logo">
+        <img
+          src="./assets/img/your-energy-logo.svg"
+          alt="Logo"
+          width="132"
+          height="14"
+        />
       </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
+
+      <div class="categories">
+        <div class="categories-container">
+          <div class="switcher"></div>
+
+          <div class="category category--active">
+            <a class="category__link" id="home-page-button" href="#">home</a>
+          </div>
+
+          <div class="category">
+            <a class="category__link" id="favorites-page-button" href="#">favorites</a>
+          </div>
+        </div>
+      </div>
+
+      <ul class="nav__networks">
+        <li class="nav__network-item">
+          <a href="" class="nav__network-link">
+            <svg class="nav__icon" width="28" height="28">
+              <use href="./assets/img/sprite.svg#facebook-gray"></use>
+            </svg>
+          </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
+        <li class="nav__network-item">
+          <a href="" class="nav__network-link">
+            <svg class="nav__icon" width="28" height="28">
+              <use href="./assets/img/sprite.svg#instagram-gray"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="nav__network-item">
+          <a href="" class="nav__network-link">
+            <svg class="nav__icon" width="28" height="28">
+              <use href="./assets/img/sprite.svg#youtube-gray"></use>
+            </svg>
+          </a>
         </li>
       </ul>
     </nav>
+
+    <div class="burger-menu-container">
+      <button class="burger-menu" id="burger-menu">
+        <svg class="burger-menu__icon" width="32" height="32">
+          <use href="./assets/img/sprite.svg#icon-burger"></use>
+        </svg>
+      </button>
+
+      <div class="side-menu" id="side-menu">
+        <button class="side-menu__close" id="side-menu-close">
+          <svg class="menu-btn-icon" width="32" height="32">
+            <use href="./assets/img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="button-container">
+          <button class="button">Home</button>
+          <button class="button">Favorites</button>
+        </div>
+        <ul class="side-menu__networks">
+          <li>
+            <a
+              href="https://www.facebook.com/goITclub/"
+              class="side-menu__network-link"
+              aria-label="Go to our Facebook page"
+              target="_blank"
+            >
+              <svg class="nav__icon" width="28" height="28">
+                <use href="./assets/img/sprite.svg#facebook-white"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/goitclub/"
+              class="side-menu__network-link"
+              aria-label="Go to our Instagram page"
+              target="_blank"
+            >
+              <svg class="nav__icon" width="28" height="28">
+                <use href="./assets/img/sprite.svg#instagram-white"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/c/GoIT"
+              class="side-menu__network-link"
+              aria-label="Go to our Youtube page"
+              target="_blank"
+            >
+              <svg class="nav__icon" width="28" height="28">
+                <use href="./assets/img/sprite.svg#youtube-white"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
+
+  <script type="module" src="./js/side-menu.js"></script>
+  <script type="module" src="./js/header.js"></script>
 </header>

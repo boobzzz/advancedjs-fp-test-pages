@@ -1,0 +1,111 @@
+@import url('./quote.css');
+@import url('exer-card.css');
+
+body {
+  background-color: #f4f4f4;
+}
+
+#favorites-page .exercises-headline-holder,
+.favorites {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  margin: auto;
+  max-width: 1440px;
+}
+
+#favorites-page .exercises-headline-holder {
+  margin: 170px auto 32px;
+}
+
+.favorites__info-panel {
+  width: 40%;
+}
+
+.hint-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 20px;
+  height: 119px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  color: #242424;
+}
+
+.hint-content__title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.hint-content__text {
+  margin-top: 10px;
+  color: #24242499;
+}
+
+.favorites-img {
+  margin-top: 20px;
+  width: 100%;
+  height: 119px;
+}
+
+.favorites-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.list__empty-msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.list__empty-msg p {
+  display: inline-block;
+  width: 60%;
+  text-align: center;
+}
+
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 1280px) {
+  .favorites {
+    padding-bottom: 48px;
+  }
+
+  .favorites__info-panel {
+    width: 35%;
+  }
+
+  .favorites__list {
+    width: 65%;
+  }
+
+  .info-panel__hint {
+    display: flex;
+    gap: 16px;
+  }
+
+  .hint-container,
+  .favorites-img {
+    width: 50%;
+  }
+
+  .exer-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    padding-right: 8px;
+    height: calc((141px + 20px) * 3);
+    overflow-y: scroll;
+  }
+}
